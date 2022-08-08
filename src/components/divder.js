@@ -3,8 +3,6 @@ import styled from "styled-components";
 import { color } from "../utils/colors";
 import { fontSize, fontName } from "../utils/fonts";
 
-
-
 const Divder = (props) => {
   return (
     <DividerContainer>
@@ -35,5 +33,5 @@ const Label = styled.p`
   color: white;
   margin: 0 8px;
   font-size: ${fontSize.subtitle};
-  font-style: ${fontName.title};
+  font-family: ${fontName.secondary};
 `;

@@ -9,7 +9,6 @@ const API =
 
 const Card = () => {
   const [character, setCharacter] = useState([]);
-  const ingredientes = [];
   useEffect(() => {
     fetch(API)
       .then((response) => response.json())
@@ -113,6 +112,7 @@ const IngredientBox = styled.div`
 
 const Description = styled.p`
   color: ${color.white};
+  font-family: ${fontName.secondary};
 `;
 
 const DrinkName = styled.p`
@@ -130,5 +130,5 @@ const DrinkPhoto = styled.img`
 
 const IngredientsLabel = styled.p`
   font-size: ${fontSize.small};
-  font-family: ${fontName.title};
+  font-family: ${fontName.secondary};
 `;
