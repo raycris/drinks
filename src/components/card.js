@@ -8,18 +8,18 @@ const API =
   "https://www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita";
 
 const Card = () => {
-  const [character, setCharacter] = useState([]);
+  const [drink, setDrink] = useState([]);
   useEffect(() => {
     fetch(API)
       .then((response) => response.json())
       .then((data) => {
-        setCharacter(data.drinks);
+        setDrink(data.drinks);
       });
   }, []);
 
   return (
     <Container>
-      {character.map((item) => (
+      {drink.map((item) => (
         <CardContainer key={item.idDrink}>
           <DrinkName>{item.strDrink}</DrinkName>
           <DrinkContainerDescription>
